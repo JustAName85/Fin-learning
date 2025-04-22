@@ -13,11 +13,11 @@ export const Main: React.FC<MainProps> = ({ focusEmailField }) => {
   const [isFocused, setIsFocused] = React.useState(false);
   const isMobile = useIsMobile();
 
-  const sendEmail = (email: string, name: string) => {
+  const sendEmail = (email: string, password: string) => {
     api
       .post("sendEmail", {
         email,
-        name,
+        password,
       })
       .then((response) => {
         console.log("Email sent successfully:", response.data);

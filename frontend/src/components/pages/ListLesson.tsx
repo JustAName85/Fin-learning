@@ -11,33 +11,38 @@ export const ListLesson = ({
     {
       id: 1,
       title: "Hiểu về bản chất thực sự của thị trường Forex",
-      viewed: 823,
+      time: "15:48",
     },
     {
       id: 2,
       title: "Trader có tác động lên cung cầu của thị trường Forex không?",
-      viewed: 1477,
+      time: "6:28",
     },
     {
       id: 3,
       title: "Tiền nạp vào sàn sẽ đi đâu? Bạn đang thực sự giao dịch với ai?",
-      viewed: 536,
+      time: "5:35",
     },
-    { id: 4, title: "Sàn Forex làm gì với tiền của bạn?", viewed: 962 },
+    { id: 4, title: "Sàn Forex làm gì với tiền của bạn?", time: "6:03" },
     {
       id: 5,
       title: "Những chiêu trò thường gặp của sàn và môi giới Forex",
-      viewed: 1291,
+      time: "3:48",
     },
     {
       id: 6,
       title: "Lợi nhuận tiềm năng và các rủi ro khi tham gia thị trường",
-      viewed: 1152,
+      time: "8:38",
     },
     {
       id: 7,
       title: "Bí quyết để chiến thắng lâu dài trong giao dịch Forex",
-      viewed: 748,
+      time: "30:55",
+    },
+    {
+      id: 8,
+      title: "Bản đồ thành công trong giao dịch Forex",
+      time: "15:25",
     },
   ];
 
@@ -49,7 +54,7 @@ export const ListLesson = ({
             key={lesson.id}
             id={lesson.id}
             title={lesson.title}
-            viewed={lesson.viewed}
+            time={lesson.time}
             focusEmailField={focusEmailField}
           />
         ))}
